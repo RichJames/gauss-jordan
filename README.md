@@ -4,12 +4,12 @@
 This is a project to implement the Gauss-Jordan algorithm to solves a set of equations.
 It takes a fairly simple approach:
 
-  for each column,\ 
+  for each column,\
     divide the row to leave a 1 in the diagonal\
     zero out the remaining column values (except the rightmost column) via row
 	  multiplication and addition
 	  
-Two functions are exported: 
+Two functions are exported:\
  solve-matrix\
  pretty-print-matrix
  
