@@ -27,7 +27,7 @@ pretty-print-matrix will display it as:
  (1 5 9 12)\
  (-4 7 -8 10)
  
-Obviously, it could be improved to align columns, but it generally wouldn't be needed as the intent is to pretty print the results of the gauss-jordan result of such a matrix.  E.g., if the above matrix was called *my-matrix*, a call to
+Obviously, it could be improved to align the columns, but it generally wouldn't be needed as the intent is to pretty print the results of the gauss-jordan result of such a matrix.  E.g., if the above matrix was called *my-matrix*, a call to
 
 (pretty-print-matrix (solve-matrix *my-matrix*))
 
