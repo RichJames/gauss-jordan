@@ -35,7 +35,7 @@
   (mapcar #'+ mod-row (multiply-row mult-row val)))
 
 (defun solve-column (matrix col-num)
-  "Reduces values in a column to 0, or 1 if the row number = column number)"
+  "Reduces values in a column to 0, or 1 if the row number = column number."
   (let ((m (diagonal-one matrix col-num)))
     (loop :for row :in m :for i :below (length m)
        :if (equal i col-num) :collect row
