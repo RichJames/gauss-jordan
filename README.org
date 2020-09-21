@@ -13,11 +13,11 @@ Two functions are exported:
  solve-matrix 
  pretty-print-matrix
  
-Solve-matrix takes any 2-dimensional matrix of equations where the coefficients of each of the variables are listed left to right and the constant the equation is equal to is in the rightmost column.  Each equation is in its own row in the matrix.
+*Solve-matrix*: takes any 2-dimensional matrix of equations where the coefficients of each of the variables are listed left to right and the constant the equation is equal to is in the rightmost column.  Each equation is in its own row in the matrix.
 
 It then applies the Gauss-Jordan technique to reduce the matrix to its equivalent form where we have 1's along the diagonal from right to left and zeros in all other coefficient positions.  The rightmost column will contain the value of each variable.
 
-Pretty-print-matrix is a simple function to display a 2-dimensional matrix in a more human-readable form. For example, given this matrix: 
+*Pretty-print-matrix*: is a simple function to display a 2-dimensional matrix in a more human-readable form. For example, given this matrix: 
 
  ((2 3 4 10) (1 5 9 12) (-4 7 -8 19))
 
