@@ -47,9 +47,6 @@
      :else :collect row :into non-zero-rows
      :finally (return (append non-zero-rows zero-rows))))
 
-(defun zero-row-p (row)
-  (every #'zerop row))
-
 (defun get-elem (matrix row col)
   "Returns the value of a specified element in a 2-dimensional matrix."
   (nth col (nth row matrix)))
@@ -122,8 +119,10 @@
     (format t "~&~a" row)))
 
 
-;; Utility predicates that are not currently being used.  These could be used to determine whether or not
-;; a set of equations could be solved.  For now, assessing the result is being left to the caller.
+;; ****************  Predicates ****************
+
+(defun zero-row-p (row)
+  (every #'zerop row))
 
 (defun zeros-and-val-p (row)
   "Returns T if all values but rightmost one are 0."
