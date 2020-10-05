@@ -130,8 +130,8 @@
     (and (not (zero-row-p row)) (zero-row-p r))))
 
 (defun infinite-solutions-p (matrix)
-  (find-if #'zero-row-p matrix))
+  (find-if #'zero-row-p (solve-matrix matrix)))
 
 (defun no-solutions-p (matrix)
-  (find-if #'zeros-and-val-p matrix))
+  (find-if #'zeros-and-val-p (solve-matrix matrix)))
 

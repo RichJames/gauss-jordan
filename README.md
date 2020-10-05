@@ -4,14 +4,18 @@
 This is a project to implement the Gauss-Jordan algorithm to solves a set of equations.
 It takes a fairly simple approach:
 
-  for each column,\
-    divide the row to leave a 1 in the diagonal\
-    zero out the remaining column values (except the rightmost column) via row
-	  multiplication and addition
+  Move all rows containing only zeros to the bottom of the matrix.\
+  For each row,\
+    Ensure the leading value for that row (aka at pos (row,row) is non-zoro, else move a
+	  row below that row that does have a non-zero leading value up to take this row's place.\
+	Divide the row to make it's leading value 1\
+    Zero out the column values of the other rows via multiplication and addition
 	  
-Two functions are exported:\
+These functions are exported:\
  solve-matrix\
- pretty-print-matrix
+ pretty-print-matrix\
+ infinite-solutions-p\
+ no-solutions-p
  
 **Solve-matrix**: takes any 2-dimensional matrix of equations where the coefficients of each of the variables are listed left to right and the constant the equation is equal to is in the rightmost column.  Each equation is in its own row in the matrix.
 
@@ -38,6 +42,10 @@ would result in:
  (0 0 1 -1/2)
 
 The result column could be aligned, but this is a good first start.
+
+**infinite-solutions-p**: is a predicate test that can be applied to a matrix to determine if it has a discrete solution or if infinite solutions are possible for the matrix.
+
+**no-solutions-p**: is a predicate test that can be applied to a matrix to determine if it can be solved at all.
 
 ## License
 
