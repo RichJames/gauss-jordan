@@ -17,7 +17,7 @@ These functions are exported:\
  infinite-solutions-p\
  no-solutions-p
  
-**Solve-matrix**: takes any 2-dimensional matrix of equations where the coefficients of each of the variables are listed left to right and the constant the equation is equal to is in the rightmost column.  Each equation is in its own row in the matrix.
+**Solve-matrix**: takes any matrix of equations where the coefficients of each of the variables are listed left to right and the constant the equation is equal to is in the rightmost column.  Each equation is in its own row in the matrix.
 
 It then applies the Gauss-Jordan technique to reduce the matrix to its equivalent form where we have 1's along the diagonal from right to left and zeros in all other coefficient positions.  The rightmost column will contain the value of each variable.
 
@@ -43,7 +43,7 @@ would result in:
 
 The result column could be aligned, but this is a good first start.
 
-**infinite-solutions-p**: is a predicate test that can be applied to a matrix to determine if it has a discrete solution or if infinite solutions are possible for the matrix.
+**infinite-solutions-p**: is a predicate test that can be applied to a matrix to determine if it has a discrete solution or if infinite solutions are possible.
 
 **no-solutions-p**: is a predicate test that can be applied to a matrix to determine if it can be solved at all.
 
